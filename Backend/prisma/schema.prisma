@@ -1,0 +1,115 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model category {
+  id    Int     @id @default(autoincrement())
+  name  String  @db.VarChar(255)
+  posts posts[]
+}
+
+model users {
+  id                                       Int           @id @default(autoincrement())
+  username                                 String        @unique(map: "username") @db.VarChar(255)
+  password                                 String        @db.VarChar(255)
+  role                                     users_role    @default(user)
+  isActive                                 Boolean       @default(true)
+  createdAt                                DateTime      @default(now()) @db.Timestamp(0)
+  updatedAt                                DateTime      @default(now()) @db.Timestamp(0)
+  posts_posts_user_idTousers               posts[]       @relation("posts_user_idTousers")
+  posts_posts_user_update_idTousers        posts[]       @relation("posts_user_update_idTousers")
+  video_links_video_links_update_idTousers video_links[] @relation("video_links_update_idTousers")
+  video_links_video_links_user_idTousers   video_links[] @relation("video_links_user_idTousers")
+}
+
+model posts {
+  id                                Int        @id @default(autoincrement())
+  title                             String     @db.VarChar(255)
+  user_id                           Int?
+  category_id                       Int
+  cover_image_url                   String?    @db.VarChar(255)
+  video_link                        String?    @db.VarChar(255)
+  created_at                        DateTime   @default(now()) @db.Timestamp(0)
+  updated_at                        DateTime   @default(now()) @db.Timestamp(0)
+  user_update_id                    Int?
+  isActive                          Boolean?   @default(true)
+  views                             Int?       @default(0)
+  content_id                        Int
+  protection_id                     Int
+  situation_id                      Int
+  symptom_id                        Int
+  users_posts_user_idTousers        users?     @relation("posts_user_idTousers", fields: [user_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_head_user_id")
+  users_posts_user_update_idTousers users?     @relation("posts_user_update_idTousers", fields: [user_update_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_user_update_id")
+  content                           content    @relation(fields: [content_id], references: [id], onDelete: Cascade)
+  category                          category   @relation(fields: [category_id], references: [id], onUpdate: Restrict, map: "posts_ibfk_1")
+  protection                        protection @relation(fields: [protection_id], references: [id], onDelete: Cascade)
+  situation                         situation  @relation(fields: [situation_id], references: [id], onDelete: Cascade)
+  symptom                           symptom    @relation(fields: [symptom_id], references: [id], onDelete: Cascade)
+
+  @@index([category_id], map: "category_id")
+  @@index([user_id], map: "fk_head_user_id")
+  @@index([user_update_id], map: "fk_user_update_id")
+  @@index([content_id], map: "posts_content_id_fkey")
+  @@index([protection_id], map: "posts_protection_id_fkey")
+  @@index([situation_id], map: "posts_situation_id_fkey")
+  @@index([symptom_id], map: "posts_symptom_id_fkey")
+}
+
+model content {
+  id     Int     @id @default(autoincrement())
+  detail String  @db.Text
+  posts  posts[]
+}
+
+model protection {
+  id     Int     @id @default(autoincrement())
+  detail String  @db.Text
+  posts  posts[]
+}
+
+model situation {
+  id     Int     @id @default(autoincrement())
+  detail String  @db.Text
+  posts  posts[]
+}
+
+model symptom {
+  id     Int     @id @default(autoincrement())
+  detail String  @db.Text
+  posts  posts[]
+}
+
+model comments {
+  id         Int      @id @default(autoincrement())
+  value      String?  @db.VarChar(255)
+  created_at DateTime @default(now()) @db.Timestamp(0)
+}
+
+model video_links {
+  id                                 Int      @id @default(autoincrement())
+  title                              String   @db.VarChar(255)
+  description                        String?  @db.Text
+  url                                String   @db.VarChar(500)
+  user_id                            Int?
+  update_id                          Int?
+  isActive                           Boolean
+  views                              Int      @default(0)
+  thumbnail_url                      String?  @db.VarChar(500)
+  created_at                         DateTime @default(now()) @db.Timestamp(0)
+  updated_at                         DateTime @default(now()) @db.Timestamp(0)
+  users_video_links_update_idTousers users?   @relation("video_links_update_idTousers", fields: [update_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_update_id")
+  users_video_links_user_idTousers   users?   @relation("video_links_user_idTousers", fields: [user_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_user_id")
+
+  @@index([update_id], map: "fk_update_id")
+  @@index([user_id], map: "fk_user_id")
+}
+
+enum users_role {
+  user
+  admin
+}
