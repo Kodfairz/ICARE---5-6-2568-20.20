@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 05, 2025 at 01:22 PM
+-- Generation Time: Jun 05, 2025 at 02:53 PM
 -- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- PHP Version: 8.0.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -54,6 +54,13 @@ CREATE TABLE `comments` (
   `value` varchar(255) DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `comments`
+--
+
+INSERT INTO `comments` (`id`, `value`, `created_at`) VALUES
+(1, 'สวัสดีครับ', '2025-06-05 05:19:02');
 
 -- --------------------------------------------------------
 
@@ -105,7 +112,8 @@ INSERT INTO `content` (`id`, `detail`) VALUES
 (32, '<p><strong>รายละเอียดของเหตุการณ์</strong><br>ตกจากที่สูงหมายถึงการตกลงมาจากระดับสูง เช่น บันได ระเบียง หรือหลังคา ซึ่งอาจทำให้เกิดบาดเจ็บรุนแรงถึงขั้นเสียชีวิตได้ การปฐมพยาบาลและการเคลื่อนย้ายผู้บาดเจ็บอย่างถูกวิธีมีความสำคัญสูง เพื่อป้องกันการบาดเจ็บเพิ่มเติมโดยเฉพาะที่กระดูกสันหลังและศีรษะ</p>'),
 (33, '<p><strong>รายละเอียดของเหตุการณ์</strong><br>การบาดเจ็บจากการเล่นกีฬาเกิดขึ้นได้กับนักกีฬาทุกระดับ ตั้งแต่มือสมัครเล่นจนถึงมืออาชีพ โดยอาจเกิดจากการกระแทก การหกล้ม การเคลื่อนไหวผิดท่า หรือใช้งานร่างกายมากเกินไป อาการบาดเจ็บมีตั้งแต่เล็กน้อย เช่น ฟกช้ำ ไปจนถึงรุนแรง เช่น กระดูกหัก เอ็นฉีก หรือสมองกระทบกระเทือน</p>'),
 (34, '<p><strong>รายละเอียดของเหตุการณ์</strong><br>ก้างปลาติดคอเป็นอุบัติเหตุที่เกิดขึ้นบ่อย โดยเฉพาะเวลารับประทานปลาที่มีก้างเล็ก ๆ หากก้างติดอยู่บริเวณลำคอหรือทอนซิล อาจทำให้รู้สึกเจ็บหรือระคายเคือง หากก้างมีขนาดใหญ่ หรือทิ่มลึก อาจก่อให้เกิดบาดแผล อักเสบ หรือภาวะแทรกซ้อน เช่น การติดเชื้อ</p>'),
-(35, '<p><strong>รายละเอียดของเหตุการณ์</strong><br>บาดเจ็บจากของมีคม หมายถึงการที่ผิวหนังหรือเนื้อเยื่อถูกของมีคมบาด เช่น มีด กระจก เหล็ก หรือโลหะแหลม ซึ่งอาจทำให้เกิดแผลฉีก แผลลึก เลือดออก หรือเสี่ยงติดเชื้อได้ การดูแลอย่างถูกวิธีช่วยลดโอกาสเกิดภาวะแทรกซ้อน เช่น บาดทะยัก หรือแผลเป็น</p>');
+(35, '<p><strong>รายละเอียดของเหตุการณ์</strong><br>บาดเจ็บจากของมีคม หมายถึงการที่ผิวหนังหรือเนื้อเยื่อถูกของมีคมบาด เช่น มีด กระจก เหล็ก หรือโลหะแหลม ซึ่งอาจทำให้เกิดแผลฉีก แผลลึก เลือดออก หรือเสี่ยงติดเชื้อได้ การดูแลอย่างถูกวิธีช่วยลดโอกาสเกิดภาวะแทรกซ้อน เช่น บาดทะยัก หรือแผลเป็น</p>'),
+(36, '<p><strong>asdasdasdasdasas</strong></p>');
 
 -- --------------------------------------------------------
 
@@ -136,41 +144,41 @@ CREATE TABLE `posts` (
 --
 
 INSERT INTO `posts` (`id`, `title`, `user_id`, `category_id`, `cover_image_url`, `video_link`, `created_at`, `updated_at`, `user_update_id`, `isActive`, `views`, `content_id`, `protection_id`, `situation_id`, `symptom_id`) VALUES
-(22, 'กลาก (Ringworm)', 1, 1, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749084990/icare/fyydnlt6ditz1g6ubjhm.jpg', 'https://youtu.be/RmNqEtn1314?si=guCxrm6CThwRbNJA', '2025-06-04 17:56:41', '2025-06-04 20:01:46', 1, 1, 67, 1, 1, 1, 1),
+(22, 'กลาก (Ringworm)', 1, 1, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749084990/icare/fyydnlt6ditz1g6ubjhm.jpg', 'https://youtu.be/RmNqEtn1314?si=guCxrm6CThwRbNJA', '2025-06-04 17:56:41', '2025-06-04 20:01:46', 1, 1, 71, 1, 1, 1, 1),
 (23, 'ความดันโลหิตสูง (Hypertension)', 1, 1, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749086319/icare/yzyxuvluiuthcwmcatxi.jpg', 'https://youtu.be/C2tZEGk0HIM?si=AdHGA1WE3m6fKOAz', '2025-06-04 18:23:21', '2025-06-04 20:03:44', 1, 1, 29, 2, 2, 2, 2),
-(24, 'งูสวัด (Shingles)', 1, 1, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749087464/icare/cvatz5d4rmqiobhdwzyj.webp', 'https://youtu.be/lmJl53QebMU?si=b5QSwskoSc6HEPFD\'', '2025-06-04 18:41:46', '2025-06-04 18:41:46', 1, 1, 6, 3, 3, 3, 3),
-(25, 'ผื่นคันตามตัว (Rash and Itching)', 1, 1, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749087723/icare/ezv0szgufuot8ybjakqa.jpg', 'https://youtu.be/JTJ5D64iiKM?si=zgJTpUAh81xVKzPE\'', '2025-06-04 18:44:10', '2025-06-04 18:44:10', 1, 1, 2, 4, 4, 4, 4),
-(26, 'ฝี (Abscess)', 1, 1, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749087899/icare/ktp0ybxyqpx1f8iyfqby.jpg', 'https://youtu.be/Lu3ONQPZwqw?si=VR3nwtdX5rMG19eE\'', '2025-06-04 18:46:28', '2025-06-04 18:46:28', 1, 1, 0, 0, 0, 0, 0),
-(27, 'ลมพิษ (Hives/Urticaria)', 1, 1, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749088007/icare/roraikxdxpcg2hngvjml.png', 'https://youtu.be/NzLc3wirx3A?si=vqiqZGMFXsCk2UeN\'', '2025-06-04 18:49:46', '2025-06-04 18:49:46', 1, 1, 0, 0, 0, 0, 0),
-(28, 'อีสุกอีใส (Chickenpox)', 1, 1, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749088217/icare/ixsllrh1hxkp1cm8yyil.jpg', 'https://youtu.be/-2UMshzSE1c?si=3F9ASQpOA4iJbTeY\'', '2025-06-04 18:53:39', '2025-06-04 18:53:39', 1, 1, 8, 0, 0, 0, 0),
-(29, 'ไข้หวัดใหญ่ (Influenza/Flu)', 1, 1, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749088560/icare/f2aourn5o770obxbylqf.jpg', 'https://youtu.be/XxiMSYi3SNQ?si=l3vlDSGm_ZV1OkkU\'', '2025-06-04 18:57:25', '2025-06-04 18:57:25', 1, 1, 0, 0, 0, 0, 0),
-(30, 'แผลพุพองอักเสบ (Blisters and Inflamed Wounds)', 1, 1, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749088665/icare/xxnrszxahlmem5vxmnr0.jpg', 'https://youtu.be/0k8KKjR3Goc?si=TzXn1l7lEa7i69-s\'', '2025-06-04 18:59:40', '2025-06-04 18:59:40', 1, 1, 0, 0, 0, 0, 0),
-(31, 'โรคไข้เลือดออก (Dengue Fever)', 1, 1, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749088799/icare/x9a1etyjt6wjocnpqe6y.jpg', 'https://youtu.be/l35Qx6zAqdQ?si=nCe52_s2FgTnocWH\'', '2025-06-04 19:01:25', '2025-06-04 19:01:25', 1, 1, 0, 0, 0, 0, 0),
-(32, 'ตากุ้งยิง (Stye)', 1, 2, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749088913/icare/ltz1a1wqrs1d5tmsqqrj.png', 'https://youtu.be/oj_3BZWLsV4?si=23XY3uIe-1AhitXs\'', '2025-06-04 19:03:25', '2025-06-04 19:03:25', 1, 1, 0, 0, 0, 0, 0),
-(33, 'เริม (Herpes Simplex)', 1, 2, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749089028/icare/djnjcfa0lelucqtytpte.jpg', 'https://youtu.be/lxHrJK_o57I?si=4SBZ6kc39A7NT3or\'', '2025-06-04 19:04:43', '2025-06-04 19:04:43', 1, 1, 0, 0, 0, 0, 0),
-(34, 'คัดจมูกแพ้อากาศ (Nasal Congestion due to Allergies/Allergic Rhinitis)', 1, 2, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749089098/icare/dgpjflf10kr2bytvw9yt.jpg', 'https://youtu.be/pwFwQSGmg8s?si=hSpN7_gA8Tl1HPj4\'', '2025-06-04 19:06:13', '2025-06-04 19:06:13', 1, 1, 0, 0, 0, 0, 0),
-(35, 'คางทูม (Mumps)', 1, 2, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749089202/icare/mxyurnbsw5qlotzekqk2.jpg', 'https://youtu.be/QkncouXudIc?si=5XrMgsTMYy3G2Uyc\'', '2025-06-04 19:07:40', '2025-06-04 19:07:40', 1, 1, 0, 0, 0, 0, 0),
-(36, 'ต่อมทอนซิลอักเสบ (Tonsillitis)', 1, 2, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749089281/icare/qrq9kamgmajf5aehpgtk.jpg', 'https://youtu.be/zBvpAqIJ570?si=0Y9QEmaroS3S_N5b\'', '2025-06-04 19:09:10', '2025-06-04 19:09:10', 1, 1, 0, 0, 0, 0, 0),
-(37, 'ไซนัสอักเสบ (Sinusitis)', 1, 2, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749089553/icare/bhiayjvqaye7yl35ou58.jpg', 'https://youtu.be/S8Cso2xNun0?si=-JK4U5pSNvbpskLt\'', '2025-06-04 19:14:02', '2025-06-04 19:14:02', 1, 1, 0, 0, 0, 0, 0),
-(38, 'เหงือกอักเสบ (Gingivitis)', 1, 2, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749089662/icare/iw8pq3wgrydo20p1fvka.jpg', 'https://youtu.be/RJmfbpiqMUc?si=USTK-LeH8XcXBDvH\'', '2025-06-04 19:15:24', '2025-06-04 19:15:24', 1, 1, 0, 0, 0, 0, 0),
-(39, 'คอพอก (Goiter)', 1, 2, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749089743/icare/raribq4nmn7ilhlaefjh.jpg', 'https://youtu.be/dwaW4UdSKW4?si=2jqb1L0C7COP7po-\'', '2025-06-04 19:16:45', '2025-06-04 19:16:45', 1, 1, 0, 0, 0, 0, 0),
-(40, 'ความดันต่ำหน้ามืดเวียนศีรษะ (Low Blood Pressure/Hypotension)', 1, 2, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749089831/icare/fjva3ulcmkcqfqbvqv9k.jpg', 'https://youtu.be/TJzBDFqxPq8?si=Zt6izck9Sg4PvWUa\'', '2025-06-04 19:18:35', '2025-06-04 19:18:35', 1, 1, 0, 0, 0, 0, 0),
-(41, 'ริดสีดวงตา (Subconjunctival Hemorrhage)', 1, 2, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749089930/icare/fakuqhwtpgiheboyuyxm.webp', 'https://youtu.be/aTQuA1pHa2E?si=2w6KJcWumvnWHdbr\'', '2025-06-04 19:20:17', '2025-06-04 19:20:17', 1, 1, 0, 0, 0, 0, 0),
-(42, 'ท้องร่วง (Diarrhea)', 1, 3, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749090033/icare/bevzyzqfz7r4iow5ysh4.jpg', 'https://youtu.be/1i6RXLm-Evs?si=HV_uzF6QrOEkWUv8\'', '2025-06-04 19:21:48', '2025-06-04 19:21:48', 1, 1, 0, 0, 0, 0, 0),
-(43, 'ท้องเสีย (Dysentery)', 1, 3, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749090147/icare/xowng3mbibnkzrhz5m9c.jpg', 'https://youtu.be/1i6RXLm-Evs?si=FG6shqUOOIGsFIDe\'', '2025-06-04 19:23:19', '2025-06-04 19:23:19', 1, 1, 0, 0, 0, 0, 0),
-(44, 'ใจสั่นใจหวิว (Palpitations)', 1, 3, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749090216/icare/cnqct6qwts7dhx1qxnso.jpg', 'https://youtu.be/ehcDxmUjx7o?si=m_swJXHF1AxFj-ym\'', '2025-06-04 19:24:31', '2025-06-04 19:24:31', 1, 1, 0, 0, 0, 0, 0),
-(45, 'พยาธิตัวตืด (Tapeworm Infestation)', 1, 3, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749090283/icare/isnqoxetgyww15vubf2t.jpg', 'https://youtu.be/FWqYjwQQzMU?si=tl3RkYHqY7QKZGCb\'', '2025-06-04 19:26:00', '2025-06-04 19:26:00', 1, 1, 0, 0, 0, 0, 0),
-(46, 'พยาธิเส้นด้าย (Threadworm Infestation)', 1, 3, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749090373/icare/ef10zjao747m8jtfrzxr.jpg', 'https://youtu.be/D0_n_rMAEdI?si=bg4PkOLG_2ayCbQU\'', '2025-06-04 19:27:18', '2025-06-04 19:27:18', 1, 1, 0, 0, 0, 0, 0),
-(47, 'กระเพาะปัสสาวะอักเสบ (Cystitis/Urinary Tract Infection - UTI)', 1, 4, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749090460/icare/pxfl4gkjkj8ubz2wbioq.jpg', 'https://youtu.be/UFA1NHMS05o?si=DD1-6O1a-tjc2wZ1\'', '2025-06-04 19:28:49', '2025-06-04 19:28:49', 1, 1, 0, 0, 0, 0, 0),
-(48, 'โรคติดต่อทางเพศ (Sexually Transmitted Infections - STIs)', 1, 4, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749090546/icare/psgmxyylzgoisztrvnhh.png', 'https://youtu.be/rY9hKJUY_F8?si=22Iko9yYfHQve4Rj\'', '2025-06-04 19:30:08', '2025-06-04 19:30:08', 1, 1, 0, 0, 0, 0, 0),
-(49, 'เกาต์ (Gout)', 1, 4, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749090621/icare/qg3cdrlg5fb4noou0pon.jpg', 'https://youtu.be/-Od3rg2Y668?si=0NnGdXWv8-LAQ3o3\'', '2025-06-04 19:31:21', '2025-06-04 19:31:21', 1, 1, 0, 0, 0, 0, 0),
-(50, 'ริดสีดวงทวาร (Hemorrhoids)', 1, 4, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749090696/icare/ylm5j58p40fatpu4umng.jpg', 'https://youtu.be/xV4iwg16tYs?si=013uxx_fYKaCG_Qt\'', '2025-06-04 19:32:50', '2025-06-04 19:32:50', 1, 1, 0, 0, 0, 0, 0),
-(51, 'ถ่ายมูกหรือมูกเลือด (Nasal Discharge or Nosebleeds)', 1, 4, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749090784/icare/decihrkcr4pzxed949n1.jpg', 'https://youtu.be/_iK7j2Ie1dg?si=tlroD7otB3By1TR9\'', '2025-06-04 19:34:21', '2025-06-04 19:34:21', 1, 1, 0, 0, 0, 0, 0),
-(52, 'รถล้มการปฐมพยาบาลและการเคลื่อนย้ายผู้ป่วยในที่เกิดเหตุ', 1, 5, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749090878/icare/wcethrm3ju4zlk5vjmer.jpg', 'https://youtu.be/lhrGCUf_i5Q?si=4F8zllo7ErAd0oXK\'', '2025-06-04 19:36:50', '2025-06-04 19:37:53', 1, 1, 6, 0, 0, 0, 0),
-(53, 'ตกจากที่สูง', 1, 5, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749091159/icare/kxuh4qcsk9akakzk09pg.jpg', 'https://youtu.be/TmhXhavqwTk?si=s4_rfKYx16Jg-kFr\'', '2025-06-04 19:40:41', '2025-06-04 19:40:41', 1, 1, 0, 0, 0, 0, 0),
-(54, 'บาดเจ็บจากการเล่นกีฬา', 1, 5, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749091254/icare/tk2ixb508nj3wfgnxm7e.jpg', 'https://youtu.be/kWUzVywdm-g?si=vd1xmILQPSJfg05q\'', '2025-06-04 19:42:01', '2025-06-04 19:42:01', 1, 1, 0, 0, 0, 0, 0),
-(55, 'ก้างปลาติดคอ', 1, 5, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749091332/icare/wp2iz1cemnioh9jv0f4f.jpg', 'https://youtu.be/DwJk2ojtU2M?si=HsH9742FasYGka4G\'', '2025-06-04 19:43:29', '2025-06-04 19:43:29', 1, 1, 0, 0, 0, 0, 0),
-(56, 'บาดเจ็บจากของมีคม', 1, 5, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749091420/icare/eacktmjgrrqzctnjumyz.jpg', 'https://youtu.be/PKuYV_d1zes?si=ochLUEGZczhyh_V8\'', '2025-06-04 19:45:01', '2025-06-04 19:45:01', 1, 1, 4, 0, 0, 0, 0);
+(24, 'งูสวัด (Shingles)', 1, 1, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749087464/icare/cvatz5d4rmqiobhdwzyj.webp', 'https://youtu.be/lmJl53QebMU?si=b5QSwskoSc6HEPFD\'', '2025-06-04 18:41:46', '2025-06-04 18:41:46', 1, 1, 8, 3, 3, 3, 3),
+(25, 'ผื่นคันตามตัว (Rash and Itching)', 1, 1, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749087723/icare/ezv0szgufuot8ybjakqa.jpg', 'https://youtu.be/JTJ5D64iiKM?si=zgJTpUAh81xVKzPE\'', '2025-06-04 18:44:10', '2025-06-04 18:44:10', 1, 1, 6, 4, 4, 4, 4),
+(26, 'ฝี (Abscess)', 1, 1, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749087899/icare/ktp0ybxyqpx1f8iyfqby.jpg', 'https://youtu.be/Lu3ONQPZwqw?si=VR3nwtdX5rMG19eE\'', '2025-06-04 18:46:28', '2025-06-04 18:46:28', 1, 1, 6, 5, 5, 5, 5),
+(27, 'ลมพิษ (Hives/Urticaria)', 1, 1, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749088007/icare/roraikxdxpcg2hngvjml.png', 'https://youtu.be/NzLc3wirx3A?si=vqiqZGMFXsCk2UeN\'', '2025-06-04 18:49:46', '2025-06-04 18:49:46', 1, 1, 2, 6, 6, 6, 6),
+(28, 'อีสุกอีใส (Chickenpox)', 1, 1, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749088217/icare/ixsllrh1hxkp1cm8yyil.jpg', 'https://youtu.be/-2UMshzSE1c?si=3F9ASQpOA4iJbTeY\'', '2025-06-04 18:53:39', '2025-06-04 18:53:39', 1, 1, 12, 7, 7, 7, 7),
+(29, 'ไข้หวัดใหญ่ (Influenza/Flu)', 1, 1, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749088560/icare/f2aourn5o770obxbylqf.jpg', 'https://youtu.be/XxiMSYi3SNQ?si=l3vlDSGm_ZV1OkkU\'', '2025-06-04 18:57:25', '2025-06-04 18:57:25', 1, 1, 2, 8, 8, 8, 8),
+(30, 'แผลพุพองอักเสบ (Blisters and Inflamed Wounds)', 1, 1, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749088665/icare/xxnrszxahlmem5vxmnr0.jpg', 'https://youtu.be/0k8KKjR3Goc?si=TzXn1l7lEa7i69-s\'', '2025-06-04 18:59:40', '2025-06-04 18:59:40', 1, 1, 4, 9, 9, 9, 9),
+(31, 'โรคไข้เลือดออก (Dengue Fever)', 1, 1, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749088799/icare/x9a1etyjt6wjocnpqe6y.jpg', 'https://youtu.be/l35Qx6zAqdQ?si=nCe52_s2FgTnocWH\'', '2025-06-04 19:01:25', '2025-06-04 19:01:25', 1, 1, 6, 10, 10, 10, 10),
+(32, 'ตากุ้งยิง (Stye)', 1, 2, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749088913/icare/ltz1a1wqrs1d5tmsqqrj.png', 'https://youtu.be/oj_3BZWLsV4?si=23XY3uIe-1AhitXs\'', '2025-06-04 19:03:25', '2025-06-04 19:03:25', 1, 1, 2, 11, 11, 11, 11),
+(33, 'เริม (Herpes Simplex)', 1, 2, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749089028/icare/djnjcfa0lelucqtytpte.jpg', 'https://youtu.be/lxHrJK_o57I?si=4SBZ6kc39A7NT3or\'', '2025-06-04 19:04:43', '2025-06-04 19:04:43', 1, 1, 0, 12, 12, 12, 12),
+(34, 'คัดจมูกแพ้อากาศ (Nasal Congestion due to Allergies/Allergic Rhinitis)', 1, 2, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749089098/icare/dgpjflf10kr2bytvw9yt.jpg', 'https://youtu.be/pwFwQSGmg8s?si=hSpN7_gA8Tl1HPj4\'', '2025-06-04 19:06:13', '2025-06-04 19:06:13', 1, 1, 0, 13, 13, 13, 13),
+(35, 'คางทูม (Mumps)', 1, 2, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749089202/icare/mxyurnbsw5qlotzekqk2.jpg', 'https://youtu.be/QkncouXudIc?si=5XrMgsTMYy3G2Uyc\'', '2025-06-04 19:07:40', '2025-06-04 19:07:40', 1, 1, 0, 14, 14, 14, 14),
+(36, 'ต่อมทอนซิลอักเสบ (Tonsillitis)', 1, 2, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749089281/icare/qrq9kamgmajf5aehpgtk.jpg', 'https://youtu.be/zBvpAqIJ570?si=0Y9QEmaroS3S_N5b\'', '2025-06-04 19:09:10', '2025-06-04 19:09:10', 1, 1, 2, 15, 15, 15, 15),
+(37, 'ไซนัสอักเสบ (Sinusitis)', 1, 2, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749089553/icare/bhiayjvqaye7yl35ou58.jpg', 'https://youtu.be/S8Cso2xNun0?si=-JK4U5pSNvbpskLt\'', '2025-06-04 19:14:02', '2025-06-04 19:14:02', 1, 1, 0, 16, 16, 16, 16),
+(38, 'เหงือกอักเสบ (Gingivitis)', 1, 2, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749089662/icare/iw8pq3wgrydo20p1fvka.jpg', 'https://youtu.be/RJmfbpiqMUc?si=USTK-LeH8XcXBDvH\'', '2025-06-04 19:15:24', '2025-06-04 19:15:24', 1, 1, 0, 17, 17, 17, 17),
+(39, 'คอพอก (Goiter)', 1, 2, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749089743/icare/raribq4nmn7ilhlaefjh.jpg', 'https://youtu.be/dwaW4UdSKW4?si=2jqb1L0C7COP7po-\'', '2025-06-04 19:16:45', '2025-06-04 19:16:45', 1, 1, 2, 18, 18, 18, 18),
+(40, 'ความดันต่ำหน้ามืดเวียนศีรษะ (Low Blood Pressure/Hypotension)', 1, 2, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749089831/icare/fjva3ulcmkcqfqbvqv9k.jpg', 'https://youtu.be/TJzBDFqxPq8?si=Zt6izck9Sg4PvWUa\'', '2025-06-04 19:18:35', '2025-06-04 19:18:35', 1, 1, 0, 19, 19, 19, 19),
+(41, 'ริดสีดวงตา (Subconjunctival Hemorrhage)', 1, 2, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749089930/icare/fakuqhwtpgiheboyuyxm.webp', 'https://youtu.be/aTQuA1pHa2E?si=2w6KJcWumvnWHdbr\'', '2025-06-04 19:20:17', '2025-06-04 19:20:17', 1, 1, 4, 20, 20, 20, 20),
+(42, 'ท้องร่วง (Diarrhea)', 1, 3, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749090033/icare/bevzyzqfz7r4iow5ysh4.jpg', 'https://youtu.be/1i6RXLm-Evs?si=HV_uzF6QrOEkWUv8\'', '2025-06-04 19:21:48', '2025-06-04 19:21:48', 1, 1, 0, 21, 21, 21, 21),
+(43, 'ท้องเสีย (Dysentery)', 1, 3, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749090147/icare/xowng3mbibnkzrhz5m9c.jpg', 'https://youtu.be/1i6RXLm-Evs?si=FG6shqUOOIGsFIDe\'', '2025-06-04 19:23:19', '2025-06-04 19:23:19', 1, 1, 0, 22, 22, 22, 22),
+(44, 'ใจสั่นใจหวิว (Palpitations)', 1, 3, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749090216/icare/cnqct6qwts7dhx1qxnso.jpg', 'https://youtu.be/ehcDxmUjx7o?si=m_swJXHF1AxFj-ym\'', '2025-06-04 19:24:31', '2025-06-04 19:24:31', 1, 1, 2, 23, 23, 23, 23),
+(45, 'พยาธิตัวตืด (Tapeworm Infestation)', 1, 3, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749090283/icare/isnqoxetgyww15vubf2t.jpg', 'https://youtu.be/FWqYjwQQzMU?si=tl3RkYHqY7QKZGCb\'', '2025-06-04 19:26:00', '2025-06-04 19:26:00', 1, 1, 0, 24, 24, 24, 24),
+(46, 'พยาธิเส้นด้าย (Threadworm Infestation)', 1, 3, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749090373/icare/ef10zjao747m8jtfrzxr.jpg', 'https://youtu.be/D0_n_rMAEdI?si=bg4PkOLG_2ayCbQU\'', '2025-06-04 19:27:18', '2025-06-04 19:27:18', 1, 1, 0, 25, 25, 25, 25),
+(47, 'กระเพาะปัสสาวะอักเสบ (Cystitis/Urinary Tract Infection - UTI)', 1, 4, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749090460/icare/pxfl4gkjkj8ubz2wbioq.jpg', 'https://youtu.be/UFA1NHMS05o?si=DD1-6O1a-tjc2wZ1\'', '2025-06-04 19:28:49', '2025-06-04 19:28:49', 1, 1, 0, 26, 26, 26, 26),
+(48, 'โรคติดต่อทางเพศ (Sexually Transmitted Infections - STIs)', 1, 4, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749090546/icare/psgmxyylzgoisztrvnhh.png', 'https://youtu.be/rY9hKJUY_F8?si=22Iko9yYfHQve4Rj\'', '2025-06-04 19:30:08', '2025-06-04 19:30:08', 1, 1, 0, 27, 27, 27, 27),
+(49, 'เกาต์ (Gout)', 1, 4, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749090621/icare/qg3cdrlg5fb4noou0pon.jpg', 'https://youtu.be/-Od3rg2Y668?si=0NnGdXWv8-LAQ3o3\'', '2025-06-04 19:31:21', '2025-06-04 19:31:21', 1, 1, 0, 28, 28, 28, 28),
+(50, 'ริดสีดวงทวาร (Hemorrhoids)', 1, 4, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749090696/icare/ylm5j58p40fatpu4umng.jpg', 'https://youtu.be/xV4iwg16tYs?si=013uxx_fYKaCG_Qt\'', '2025-06-04 19:32:50', '2025-06-04 19:32:50', 1, 1, 0, 29, 29, 29, 29),
+(51, 'ถ่ายมูกหรือมูกเลือด (Nasal Discharge or Nosebleeds)', 1, 4, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749090784/icare/decihrkcr4pzxed949n1.jpg', 'https://youtu.be/_iK7j2Ie1dg?si=tlroD7otB3By1TR9\'', '2025-06-04 19:34:21', '2025-06-04 19:34:21', 1, 1, 0, 30, 30, 30, 30),
+(52, 'รถล้มการปฐมพยาบาลและการเคลื่อนย้ายผู้ป่วยในที่เกิดเหตุ', 1, 5, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749090878/icare/wcethrm3ju4zlk5vjmer.jpg', 'https://youtu.be/lhrGCUf_i5Q?si=4F8zllo7ErAd0oXK\'', '2025-06-04 19:36:50', '2025-06-04 19:37:53', 1, 1, 6, 31, 31, 31, 31),
+(53, 'ตกจากที่สูง', 1, 5, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749091159/icare/kxuh4qcsk9akakzk09pg.jpg', 'https://youtu.be/TmhXhavqwTk?si=s4_rfKYx16Jg-kFr\'', '2025-06-04 19:40:41', '2025-06-04 19:40:41', 1, 1, 0, 32, 32, 32, 32),
+(54, 'บาดเจ็บจากการเล่นกีฬา', 1, 5, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749091254/icare/tk2ixb508nj3wfgnxm7e.jpg', 'https://youtu.be/kWUzVywdm-g?si=vd1xmILQPSJfg05q\'', '2025-06-04 19:42:01', '2025-06-04 19:42:01', 1, 1, 0, 33, 33, 33, 33),
+(55, 'ก้างปลาติดคอ', 1, 5, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749091332/icare/wp2iz1cemnioh9jv0f4f.jpg', 'https://youtu.be/DwJk2ojtU2M?si=HsH9742FasYGka4G\'', '2025-06-04 19:43:29', '2025-06-04 19:43:29', 1, 1, 0, 34, 34, 34, 34),
+(56, 'บาดเจ็บจากของมีคม', 1, 5, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749091420/icare/eacktmjgrrqzctnjumyz.jpg', 'https://youtu.be/PKuYV_d1zes?si=ochLUEGZczhyh_V8\'', '2025-06-04 19:45:01', '2025-06-04 19:45:01', 1, 1, 4, 34, 34, 34, 34);
 
 -- --------------------------------------------------------
 
@@ -222,7 +230,8 @@ INSERT INTO `protection` (`id`, `detail`) VALUES
 (32, '<p><strong>วิธีดูแล และ การป้องกัน</strong></p><ul><li><p>- อย่าเคลื่อนย้ายผู้บาดเจ็บหากไม่จำเป็นโดยเฉพาะถ้ามีอาการบาดเจ็บที่ศีรษะหรือกระดูกสันหลัง</p></li><li><p>- หลีกเลี่ยงการบิดหรืองอร่างกายผู้บาดเจ็บ</p></li><li><p>- หลีกเลี่ยงการยกหรือขยับผู้บาดเจ็บอย่างรุนแรง</p></li><li><p>- ถ้าต้องเคลื่อนย้ายให้ใช้วิธีช่วยเหลือแบบถูกต้อง เช่น การพยุงด้วยบอร์ดหรือเสื่อพยุง</p></li><li><p>- รีบนำส่งโรงพยาบาลโดยเร็ว</p></li><li><p>- ในชีวิตประจำวันควรระมัดระวังการใช้อุปกรณ์ที่สูง เช่น บันได และสวมอุปกรณ์ป้องกันเมื่อทำงานในที่สูง</p></li></ul>'),
 (33, '<p><strong>วิธีดูแล และ การป้องกัน</strong></p><p><strong>การปฐมพยาบาลเบื้องต้น (หลัก R.I.C.E.):</strong></p><ul><li><p><strong>- Rest</strong>: หยุดใช้งานบริเวณที่บาดเจ็บ</p></li><li><p><strong>- Ice</strong>: ประคบเย็น 15-20 นาทีทุก 1-2 ชั่วโมง เพื่อลดบวม</p></li><li><p><strong>- Compression</strong>: ใช้ผ้ายืดพันเพื่อป้องกันอาการบวมมากขึ้น</p></li><li><p><strong>- Elevation</strong>: ยกบริเวณที่บาดเจ็บให้อยู่สูงกว่าระดับหัวใจ</p></li></ul>'),
 (34, '<p><strong>วิธีดูแล และ การป้องกัน</strong></p><p><strong>การดูแลเบื้องต้น:</strong></p><ul><li><p>- ลองดื่มน้ำ หรือน้ำลายกลืนตามปกติ หากเป็นก้างเล็ก อาจหลุดเอง</p></li><li><p>- รับประทานอาหารที่นุ่มแต่มีแรงดัน เช่น ข้าวปั้นกลืนตาม หรือกล้วย (ห้ามใช้วิธีนี้หากเจ็บมากหรือกลืนไม่ได้)</p></li><li><p>- หลีกเลี่ยงการแหย่ลำคอด้วยมือหรือของแข็ง เพราะอาจทำให้แผลลึกหรือก้างฝังมากขึ้น</p></li><li><p>- หากก้างยังไม่หลุด หรือรู้สึกเจ็บมาก <strong>ควรไปพบแพทย์ทันที</strong> เพื่อให้ผู้เชี่ยวชาญนำออกอย่างปลอดภัย<br></p></li></ul><p><strong>การป้องกัน:</strong></p><ul><li><p>- เลือกปลาที่มีก้างน้อย หรือเอาก้างออกก่อนรับประทาน</p></li><li><p>- เคี้ยวอาหารให้ละเอียดก่อนกลืน</p></li><li><p>- ระมัดระวังโดยเฉพาะในเด็กหรือผู้สูงอายุ</p></li><li><p>- หลีกเลี่ยงการพูดหรือหัวเราะขณะกินปลา</p></li></ul>'),
-(35, '<p><strong>วิธีดูแล และ การป้องกัน</strong></p><p><strong>การดูแลเบื้องต้น:</strong></p><ul><li><p>- ล้างแผลทันทีด้วยน้ำสะอาดหรือสบู่อ่อน ๆ อย่างน้อย 5 นาที</p></li><li><p>- ห้ามใช้แอลกอฮอล์หรือไฮโดรเจนเปอร์ออกไซด์โดยตรงกับแผลลึก เพราะอาจทำลายเนื้อเยื่อ</p></li><li><p>- กดแผลเพื่อห้ามเลือดด้วยผ้าสะอาดหรือผ้าก๊อซ</p></li><li><p>- ปิดแผลด้วยผ้าพันแผลที่สะอาด</p></li><li><p>- หากแผลลึกหรือเลือดไม่หยุด ควรรีบนำส่งโรงพยาบาล</p></li><li><p>- ควรพิจารณาฉีดวัคซีนบาดทะยักหากไม่ได้รับการกระตุ้นภายใน 5–10 ปี<br></p></li></ul><p><strong>การป้องกัน:</strong></p><ul><li><p>- ใช้ของมีคมอย่างระมัดระวัง และเก็บในที่ปลอดภัย</p></li><li><p>- สวมถุงมือป้องกันเมื่อต้องใช้เครื่องมือหรืออุปกรณ์แหลมคม</p></li><li><p>- ห้ามปล่อยเด็กเล่นของมีคมโดยเด็ดขาด</p></li><li><p>- หากของมีคมตกอยู่ ควรเก็บให้เรียบร้อยทันที</p></li></ul>');
+(35, '<p><strong>วิธีดูแล และ การป้องกัน</strong></p><p><strong>การดูแลเบื้องต้น:</strong></p><ul><li><p>- ล้างแผลทันทีด้วยน้ำสะอาดหรือสบู่อ่อน ๆ อย่างน้อย 5 นาที</p></li><li><p>- ห้ามใช้แอลกอฮอล์หรือไฮโดรเจนเปอร์ออกไซด์โดยตรงกับแผลลึก เพราะอาจทำลายเนื้อเยื่อ</p></li><li><p>- กดแผลเพื่อห้ามเลือดด้วยผ้าสะอาดหรือผ้าก๊อซ</p></li><li><p>- ปิดแผลด้วยผ้าพันแผลที่สะอาด</p></li><li><p>- หากแผลลึกหรือเลือดไม่หยุด ควรรีบนำส่งโรงพยาบาล</p></li><li><p>- ควรพิจารณาฉีดวัคซีนบาดทะยักหากไม่ได้รับการกระตุ้นภายใน 5–10 ปี<br></p></li></ul><p><strong>การป้องกัน:</strong></p><ul><li><p>- ใช้ของมีคมอย่างระมัดระวัง และเก็บในที่ปลอดภัย</p></li><li><p>- สวมถุงมือป้องกันเมื่อต้องใช้เครื่องมือหรืออุปกรณ์แหลมคม</p></li><li><p>- ห้ามปล่อยเด็กเล่นของมีคมโดยเด็ดขาด</p></li><li><p>- หากของมีคมตกอยู่ ควรเก็บให้เรียบร้อยทันที</p></li></ul>'),
+(36, '<p>asdasdasdasd</p>');
 
 -- --------------------------------------------------------
 
@@ -274,7 +283,8 @@ INSERT INTO `situation` (`id`, `detail`) VALUES
 (32, '<p><strong>การติดต่อ</strong></p><ul><li><p>- เหตุการณ์ตกจากที่สูงไม่ใช่โรคติดต่อ</p></li><li><p>- แต่ควรระวังการติดเชื้อจากบาดแผล หากมีแผลเปิดหรือเลือดสัมผัสผู้ช่วยเหลือ</p></li><li><p>- ควรใช้ถุงมือหรืออุปกรณ์ป้องกันเมื่อต้องสัมผัสผู้บาดเจ็บ</p></li></ul>'),
 (33, '<p><strong>การติดต่อ</strong></p><ul><li><p>- การบาดเจ็บจากการเล่นกีฬาไม่ใช่โรคติดต่อ</p></li><li><p>- อย่างไรก็ตาม หากมีแผลเปิด ควรระมัดระวังการสัมผัสเลือดหรือน้ำเหลืองเพื่อลดความเสี่ยงการติดเชื้อ</p></li><li><p>- ผู้ช่วยเหลือควรใช้ถุงมือหากต้องสัมผัสแผลหรือเลือด</p></li></ul>'),
 (34, '<p><strong>การติดต่อ</strong></p><ul><li><p>- ก้างปลาติดคอไม่ใช่ภาวะติดต่อ</p></li><li><p>- แต่ถ้ามีแผลหรือเลือด ควรหลีกเลี่ยงการสัมผัสโดยตรงเพื่อป้องกันการติดเชื้อจากน้ำลายหรือเลือด</p></li></ul>'),
-(35, '<p><strong>การติดต่อ</strong></p><ul><li><p>- แผลจากของมีคม <strong>ไม่ใช่โรคติดต่อโดยตรง</strong></p></li><li><p>- แต่ควรระวังการสัมผัสเลือดหรือสารคัดหลั่งจากแผล เพราะอาจเป็นพาหะของโรคติดต่อทางเลือด เช่น ไวรัสตับอักเสบ B, C หรือ HIV</p></li><li><p>- ผู้ให้ความช่วยเหลือควรสวมถุงมือยางเสมอ</p></li></ul>');
+(35, '<p><strong>การติดต่อ</strong></p><ul><li><p>- แผลจากของมีคม <strong>ไม่ใช่โรคติดต่อโดยตรง</strong></p></li><li><p>- แต่ควรระวังการสัมผัสเลือดหรือสารคัดหลั่งจากแผล เพราะอาจเป็นพาหะของโรคติดต่อทางเลือด เช่น ไวรัสตับอักเสบ B, C หรือ HIV</p></li><li><p>- ผู้ให้ความช่วยเหลือควรสวมถุงมือยางเสมอ</p></li></ul>'),
+(36, '<p>asdasdasd</p>');
 
 -- --------------------------------------------------------
 
@@ -326,7 +336,8 @@ INSERT INTO `symptom` (`id`, `detail`) VALUES
 (32, '<p><strong>อาการของผู้บาดเจ็บ</strong></p><ul><li><p>- ปวดหรือบาดเจ็บที่ศีรษะ คอ หรือหลัง</p></li><li><p>- มีแผลเปิดหรือเลือดออก</p></li><li><p>- ไม่รู้สึกตัว หรือสับสน</p></li><li><p>- หายใจลำบาก หรือหายใจผิดปกติ</p></li><li><p>- แขนขาเคลื่อนไหวไม่ได้ หรือชาร่วมด้วย</p></li><li><p>- มีอาการช็อก เช่น ตัวซีด เหงื่อออก ตัวเย็น</p></li></ul>'),
 (33, '<p><strong>อาการของผู้บาดเจ็บ</strong></p><ul><li><p>- ปวด บวม แดง หรือฟกช้ำบริเวณที่ได้รับบาดเจ็บ</p></li><li><p>- ข้อเคลื่อนไม่ได้ หรือเคลื่อนไหวลำบาก</p></li><li><p>- รู้สึกอ่อนแรงหรือชา</p></li><li><p>- มีเสียง \"เป๊าะ\" หรือ \"ดังกร๊อบ\" ขณะบาดเจ็บ</p></li><li><p>- หากบาดเจ็บรุนแรง เช่น กระดูกหักหรือศีรษะกระแทก อาจหมดสติหรือมีอาการคลื่นไส้อาเจียนร่วมด้วย</p></li></ul>'),
 (34, '<p><strong>อาการของผู้บาดเจ็บ</strong></p><ul><li><p>- เจ็บคอหรือระคายเคืองในลำคอ</p></li><li><p>- รู้สึกเหมือนมีสิ่งแปลกปลอมติดอยู่</p></li><li><p>- กลืนลำบากหรือเจ็บขณะกลืน</p></li><li><p>- อาจมีเลือดออกเล็กน้อยในบางกรณี</p></li><li><p>- หากปล่อยไว้นาน อาจเกิดบวม อักเสบ หรือเป็นไข้ได้</p></li></ul>'),
-(35, '<p><strong>อาการของผู้บาดเจ็บ</strong></p><ul><li><p>- มีแผลเปิดหรือแผลลึก</p></li><li><p>- เลือดออกจากแผลมากหรือน้อย ขึ้นอยู่กับความลึก</p></li><li><p>- อาจรู้สึกปวดหรือแสบ</p></li><li><p>- หากแผลลึกอาจเห็นกล้ามเนื้อหรือเนื้อเยื่อภายใน</p></li><li><p>- อาจมีอาการบวม แดง หรือมีหนอง หากติดเชื้อ</p></li></ul>');
+(35, '<p><strong>อาการของผู้บาดเจ็บ</strong></p><ul><li><p>- มีแผลเปิดหรือแผลลึก</p></li><li><p>- เลือดออกจากแผลมากหรือน้อย ขึ้นอยู่กับความลึก</p></li><li><p>- อาจรู้สึกปวดหรือแสบ</p></li><li><p>- หากแผลลึกอาจเห็นกล้ามเนื้อหรือเนื้อเยื่อภายใน</p></li><li><p>- อาจมีอาการบวม แดง หรือมีหนอง หากติดเชื้อ</p></li></ul>'),
+(36, '<p>asdasdasdasdasd</p>');
 
 -- --------------------------------------------------------
 
@@ -349,7 +360,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `role`, `isActive`, `createdAt`, `updatedAt`) VALUES
-(1, 'admin', '$2b$10$4.OAlaztF9R6.Vho4UJet.a.oujocS0BJtNzM4ZimYEBFNyL3PeEK', 'admin', 1, '2025-06-04 14:43:10', '2025-06-04 14:43:10');
+(1, 'admin', '$2b$10$4.OAlaztF9R6.Vho4UJet.a.oujocS0BJtNzM4ZimYEBFNyL3PeEK', 'admin', 1, '2025-06-04 14:43:10', '2025-06-04 14:43:10'),
+(2, 'admin2', '$2b$10$uUyTc3Fzzjcp/Vz9LvNubOi4NIUV1Y4kBXXkixheME8CABbj5jyDe', 'admin', 1, '2025-06-05 05:19:17', '2025-06-05 05:19:17');
 
 -- --------------------------------------------------------
 
@@ -376,10 +388,10 @@ CREATE TABLE `video_links` (
 --
 
 INSERT INTO `video_links` (`id`, `title`, `description`, `url`, `user_id`, `update_id`, `isActive`, `views`, `thumbnail_url`, `created_at`, `updated_at`) VALUES
-(1, 'วิธีการป้องกันตัวเองจาก COVID - 19', 'COVID-19 (โควิด-19) เป็นโรคติดเชื้อไวรัสโคโรนาสายพันธุ์ใหม่ 2019 (SARS-CoV-2) ซึ่งสามารถแพร่กระจายจากคนสู่คนผ่านทางละอองฝอยจากการไอ จาม พูด หรือสัมผัสพื้นผิวที่มีเชื้อแล้วนำเข้าสู่ร่างกายทางจมูก ปาก หรือดวงตา โรคนี้สามารถทำให้เกิดอาการได้ตั้งแต่เล็กน้อย เช่น ไข้ ไอ จนถึงรุนแรง เช่น ปอดอักเสบ หายใจลำบาก และอาจเป็นอันตรายถึงชีวิต โดยเฉพาะในกลุ่มผู้สูงอายุ หรือผู้มีโรคประจำตัว การป้องกันตนเองอย่างถูกวิธีเป็นสิ่งสำคัญในการลดการแพร่กระจายและการติดเชื้อของโรคนี้', 'https://youtu.be/KdRXe6ZfK6w?si=-MBmQK5MAyRQlrWH\'', 1, 1, 1, 4, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749092174/icare/zujlb51qiytb2mpstxqi.png', '2025-06-04 19:56:58', '2025-06-04 19:56:58'),
+(1, 'วิธีการป้องกันตัวเองจาก COVID - 19', 'COVID-19 (โควิด-19) เป็นโรคติดเชื้อไวรัสโคโรนาสายพันธุ์ใหม่ 2019 (SARS-CoV-2) ซึ่งสามารถแพร่กระจายจากคนสู่คนผ่านทางละอองฝอยจากการไอ จาม พูด หรือสัมผัสพื้นผิวที่มีเชื้อแล้วนำเข้าสู่ร่างกายทางจมูก ปาก หรือดวงตา โรคนี้สามารถทำให้เกิดอาการได้ตั้งแต่เล็กน้อย เช่น ไข้ ไอ จนถึงรุนแรง เช่น ปอดอักเสบ หายใจลำบาก และอาจเป็นอันตรายถึงชีวิต โดยเฉพาะในกลุ่มผู้สูงอายุ หรือผู้มีโรคประจำตัว การป้องกันตนเองอย่างถูกวิธีเป็นสิ่งสำคัญในการลดการแพร่กระจายและการติดเชื้อของโรคนี้', 'https://youtu.be/KdRXe6ZfK6w?si=-MBmQK5MAyRQlrWH\'', 1, 1, 1, 6, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749092174/icare/zujlb51qiytb2mpstxqi.png', '2025-06-04 19:56:58', '2025-06-04 19:56:58'),
 (2, 'การแก้ปัญหาการนอนหลับ', 'การนอนหลับไม่เพียงพอหรือหลับไม่สนิทเป็นปัญหาสุขภาพที่พบได้บ่อยในทุกช่วงวัย ซึ่งอาจเกิดจากหลายปัจจัย เช่น ความเครียด ความวิตกกังวล การใช้เทคโนโลยีก่อนนอน การบริโภคคาเฟอีนหรือแอลกอฮอล์ รวมถึงโรคประจำตัวบางชนิด เช่น ภาวะหยุดหายใจขณะหลับ หรือภาวะซึมเศร้า ปัญหาการนอนหลับส่งผลกระทบต่อสุขภาพโดยรวมทั้งทางร่างกายและจิตใจ เช่น อ่อนเพลีย สมาธิสั้น ภูมิคุ้มกันลดลง และเสี่ยงต่อโรคเรื้อรังในระยะยาว การแก้ไขปัญหานี้ควรเริ่มจากการปรับพฤติกรรมการใช้ชีวิต และหากอาการรุนแรงควรปรึกษาแพทย์ผู้เชี่ยวชาญด้านการนอนหลับ', 'https://youtu.be/_hsa4aoqgDk?si=tVwZnkzE4FoUjzaB\'', 1, 1, 1, 7, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749092266/icare/wz6trkonilc8t8roa1zo.jpg', '2025-06-04 19:58:20', '2025-06-04 19:58:20'),
 (3, 'การรับมือความเครียดทางจิตใจ', 'ความเครียดทางจิตใจเป็นภาวะที่เกิดขึ้นเมื่อบุคคลเผชิญกับแรงกดดัน อารมณ์ลบ หรือสถานการณ์ที่ยากลำบาก เช่น ปัญหาทางการเงิน ความสัมพันธ์ การเรียน หรือการทำงาน ความเครียดอาจเกิดขึ้นชั่วคราวหรือเรื้อรัง และส่งผลกระทบต่อทั้งร่างกายและจิตใจ เช่น อาการปวดศีรษะ หงุดหงิด นอนไม่หลับ เบื่ออาหาร หรือหมดแรงจูงใจ หากปล่อยไว้นานโดยไม่จัดการ อาจนำไปสู่ภาวะซึมเศร้า วิตกกังวล หรือโรคทางกายอื่น ๆ การเรียนรู้วิธีรับมือกับความเครียดอย่างเหมาะสมจึงมีความสำคัญต่อการรักษาสุขภาพจิตและคุณภาพชีวิตในระยะยาว', 'https://youtu.be/U7d1-_SWJv4?si=GqCZn7KfJWygCv3H\'', 1, 1, 1, 0, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749092308/icare/bcjo6vylda6emcu6mqgl.jpg', '2025-06-04 19:58:53', '2025-06-04 19:58:53'),
-(4, 'การปฐมพยาบาลด้วยผ้าพันแผล', 'การปฐมพยาบาลด้วยผ้าพันแผลเป็นขั้นตอนพื้นฐานในการดูแลผู้บาดเจ็บเบื้องต้น โดยเฉพาะในกรณีที่มีแผลถลอก แผลลึก หรือเลือดออก เพื่อควบคุมการเสียเลือด ป้องกันการติดเชื้อ และช่วยพยุงเนื้อเยื่อบริเวณบาดแผล ผ้าพันแผลมีหลายประเภท เช่น ผ้าก๊อซ ผ้ายืด และผ้าพันสามเหลี่ยม การใช้ผ้าพันแผลอย่างถูกวิธีต้องคำนึงถึงความสะอาด ความกระชับ และไม่พันแน่นจนเกินไป เพื่อไม่ให้เลือดไหลเวียนติดขัด การปฐมพยาบาลที่เหมาะสมสามารถลดภาวะแทรกซ้อนและช่วยให้ผู้บาดเจ็บฟื้นตัวได้เร็วขึ้น', 'https://youtu.be/LJzOGqrd75M?si=xISIkHJP2OHEIim3\'', 1, 1, 1, 2, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749092348/icare/t3opfnjtqmhir1wq3bw6.jpg', '2025-06-04 19:59:21', '2025-06-04 19:59:21'),
+(4, 'การปฐมพยาบาลด้วยผ้าพันแผล', 'การปฐมพยาบาลด้วยผ้าพันแผลเป็นขั้นตอนพื้นฐานในการดูแลผู้บาดเจ็บเบื้องต้น โดยเฉพาะในกรณีที่มีแผลถลอก แผลลึก หรือเลือดออก เพื่อควบคุมการเสียเลือด ป้องกันการติดเชื้อ และช่วยพยุงเนื้อเยื่อบริเวณบาดแผล ผ้าพันแผลมีหลายประเภท เช่น ผ้าก๊อซ ผ้ายืด และผ้าพันสามเหลี่ยม การใช้ผ้าพันแผลอย่างถูกวิธีต้องคำนึงถึงความสะอาด ความกระชับ และไม่พันแน่นจนเกินไป เพื่อไม่ให้เลือดไหลเวียนติดขัด การปฐมพยาบาลที่เหมาะสมสามารถลดภาวะแทรกซ้อนและช่วยให้ผู้บาดเจ็บฟื้นตัวได้เร็วขึ้น', 'https://youtu.be/LJzOGqrd75M?si=xISIkHJP2OHEIim3\'', 1, 1, 1, 4, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749092348/icare/t3opfnjtqmhir1wq3bw6.jpg', '2025-06-04 19:59:21', '2025-06-04 19:59:21'),
 (5, 'การเลือกใช้ยาสามัญประจำบ้าน', 'การเลือกใช้ยาสามัญประจำบ้านเป็นแนวทางในการดูแลสุขภาพเบื้องต้นของตนเองและครอบครัว โดยเน้นการใช้ยาอย่างเหมาะสมกับอาการเบื้องต้น เช่น ยาแก้ไข้ ยาแก้ปวด ยาแก้แพ้ ยาแก้ท้องเสีย ยาทาภายนอก หรือยาลดกรดในกระเพาะ เป็นต้น การมีชุดยาสามัญประจำบ้านไว้สามารถช่วยบรรเทาอาการเล็กน้อยได้ทันท่วงที ลดความเสี่ยงในการเกิดภาวะแทรกซ้อน อย่างไรก็ตาม การเลือกใช้ยาควรอ่านฉลากและปฏิบัติตามคำแนะนำอย่างถูกต้อง หลีกเลี่ยงการใช้ยาเกินขนาดหรือใช้ผิดประเภท และควรปรึกษาเภสัชกรหรือแพทย์หากไม่แน่ใจ เพื่อความปลอดภัยและประสิทธิภาพในการรักษา', 'https://youtu.be/MVmMYIu0UPc?si=ij32CxMg-jZcAtIQ\'', 1, 1, 1, 2, 'http://res.cloudinary.com/dcq3ijz0g/image/upload/v1749092373/icare/wrp2j3irq46wbrss6jrg.jpg', '2025-06-04 19:59:59', '2025-06-04 19:59:59');
 
 --
@@ -464,49 +476,49 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT for table `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `content`
 --
 ALTER TABLE `content`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
 
 --
 -- AUTO_INCREMENT for table `protection`
 --
 ALTER TABLE `protection`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT for table `situation`
 --
 ALTER TABLE `situation`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT for table `symptom`
 --
 ALTER TABLE `symptom`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `video_links`
 --
 ALTER TABLE `video_links`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Constraints for dumped tables
